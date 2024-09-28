@@ -6,7 +6,7 @@ import MenuIcon from '@/assets/menu.svg'
 
 const Header = () => {
   return (
-    <header className='sticky backdrop-blur-sm'>
+    <header className='sticky top-0 backdrop-blur-sm z-10'>
       <div className="flex justify-center items-center bg-black text-white gap-4 py-3">
         <p className="text-white/60 hidden md:block">
           Streamline your workflow and boost your productivity.
@@ -28,7 +28,7 @@ const Header = () => {
               <li>Customers</li>
               <li>Updates</li>
               <li>Help</li>
-              <button className='px-4 py-2 bg-black text-white rounded-lg tracking-tight'>Get for free</button>
+              <button className='px-4 py-2 bg-black text-white rounded-lg tracking-tight font-medium'>Get for free</button>
             </ul>
           </div>
         </div>
