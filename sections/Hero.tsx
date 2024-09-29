@@ -12,7 +12,7 @@ const Hero = () => {
       <div className="container">
         <div className="md:flex items-center">
           <div className="md:w-[478px]">
-            <p className="border-2 border-black/10 text-sm inline-flex px-3 py-1 rounded-lg">
+            <p className="tag">
               Version 2.0 is here
             </p>
             <h1 className="text-5xl md:text-7xl font-bold mt-8 bg-gradient-to-t from-[#001E7F] to-black bg-clip-text text-transparent">
