@@ -8,10 +8,10 @@ const Pricing = () => {
       <div className="container">
         <div className="max-w-[540px] mx-auto">
           <div className="text-center">
-            <h1 className="bg-gradient-to-t from-[#001E7F] to-black bg-clip-text text-transparent md:text-[54px] md:leading-[62px] tracking-tighter font-bold text-[30px]">
+            <h1 className="title">
               Pricing
             </h1>
-            <p className="text-[#010D3E] leading-[30px] tracking-tight text-[22px] mt-4">
+            <p className="description mt-4">
               Free forever. Upgrade for unlimited tasks, better security, and
               exclusive features.
             </p>

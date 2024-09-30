@@ -13,7 +13,7 @@ const Plans = ({
 }: TPlaning) => {
   return (
     <div className="max-w-[320px]">
-      <div className={`${inverse ? 'bg-black text-white' : 'bg-white'} boder-[#F1F1F1] px-10 py-10 rounded-3xl w-full shadow-[0_7px_14px_#EAEAEA]`}>
+      <div className={`${inverse ? 'bg-black text-white border-[#EAEAEA]' : 'bg-white'} card border`}>
         <div className="text-lg leading-7 tracking-tighter">
           <div className="flex justify-between items-center">
             <p className={twMerge("text-black/50 font-bold",inverse && 'text-white/60' )}>{title}</p>
