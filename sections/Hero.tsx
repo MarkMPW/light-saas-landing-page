@@ -6,7 +6,6 @@ import CogImage from "@/assets/cog.png";
 import Cylinder from "@/assets/cylinder.png";
 import Noodle from "@/assets/noodle.png";
 
-import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 const Hero = () => {
