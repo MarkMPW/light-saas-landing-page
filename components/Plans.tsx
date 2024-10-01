@@ -1,7 +1,10 @@
+"use client";
+
 import React from "react";
 import Check from "@/assets/check.svg";
 import { twMerge } from "tailwind-merge";
 import { TPlaning } from "@/interface/PlaningType";
+import { motion } from "framer-motion";
 
 const Plans = ({
   title,
@@ -13,24 +16,59 @@ const Plans = ({
 }: TPlaning) => {
   return (
     <div className="max-w-[320px]">
-      <div className={`${inverse ? 'bg-black text-white border-[#EAEAEA]' : 'bg-white'} card border`}>
+      <div
+        className={`${
+          inverse ? "bg-black text-white border-[#EAEAEA]" : "bg-white"
+        } card border`}
+      >
         <div className="text-lg leading-7 tracking-tighter">
           <div className="flex justify-between items-center">
-            <p className={twMerge("text-black/50 font-bold",inverse && 'text-white/60' )}>{title}</p>
+            <p
+              className={twMerge(
+                "text-black/50 font-bold",
+                inverse && "text-white/60"
+              )}
+            >
+              {title}
+            </p>
             {popular && (
               <div className="inline-flex text-sm px-4 py-1.5 rounded-xl border border-white/20">
-                <p className="bg-[linear-gradient(to_right,#DD7DFF,#E1CD86,#8BCB92,#71C2EF,#3BFFFF,#DD7DFF)] bg-clip-text text-transparent font-medium text-sm">
+                <motion.span 
+                  className="bg-[linear-gradient(to_right,#DD7DFF,#E1CD86,#8BCB92,#71C2EF,#3BFFFF,#DD7DFF,#E1CD86,#8BCB92,#71C2EF,#3BFFFF,#DD7DFF)] [background-size:200%] bg-clip-text text-transparent font-medium text-sm"
+                  animate={{
+                    backgroundPositionX: '100%'
+                  }}
+                  transition={{
+                    duration: 10,
+                    repeat: Infinity,
+                    ease: 'linear',
+                    repeatType: 'loop'
+                  }}
+                >
                   Most Popular
-                </p>
+                </motion.span>
               </div>
             )}
           </div>
 
           <h2 className="font-bold text-4xl mt-[30px]">
             ${price}
-            <span className={twMerge("text-black/50 text-base", inverse && 'text-white/60')}> /month</span>
+            <span
+              className={twMerge(
+                "text-black/50 text-base",
+                inverse && "text-white/60"
+              )}
+            >
+              {" "}
+              /month
+            </span>
           </h2>
-          <button className={twMerge("btn btn-primary w-full flex justify-center mt-[30px] font-medium text-base", inverse && 'bg-white text-black')}>
+          <button
+            className={twMerge(
+              "btn btn-primary w-full flex justify-center mt-[30px] font-medium text-base",
+              inverse && "bg-white text-black"
+            )}
+          >
             {buttonText}
           </button>
         </div>
